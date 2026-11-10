@@ -1,1 +1,524 @@
 
+/* =========================================================
+   Tukang AC - style.css
+   Palet warna diambil dari logo: biru tua, biru royal,
+   biru langit, biru muda, dan kuning kilau.
+   ========================================================= */
+
+:root {
+    color-scheme: light;
+
+    --biru-tua: #0b3a8c;
+    --biru: #1565d8;
+    --biru-langit: #29a3f0;
+    --biru-muda: #e8f3fc;
+    --biru-pucat: #f4f9fe;
+    --kuning: #f9b81d;
+
+    --teks: #10264d;
+    --teks-lembut: #4a5f80;
+    --garis: #cfe3f7;
+
+    --wa: #16934a;       /* hijau khusus tombol WhatsApp */
+    --wa-gelap: #117a3d;
+
+    --bayangan: 0 4px 16px rgba(11, 58, 140, 0.10);
+}
+
+/* ---------- Dasar ---------- */
+html { scroll-behavior: smooth; }
+
+html, body {
+    background: #fff;
+    color: var(--teks);
+}
+
+body {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 { color: var(--biru-tua); font-weight: 700; }
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--biru-langit);
+    outline-offset: 2px;
+}
+
+/* ---------- Pembungkus halaman ---------- */
+.page {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+main.page {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 5vw, 3.5rem);
+    padding-block: clamp(1rem, 3vw, 2rem);
+}
+
+main section[id] { scroll-margin-top: 6rem; }
+
+/* ---------- Tombol ---------- */
+.btn-biru,
+.btn-wa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.5rem;
+    border: 0;
+    border-radius: 999px;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-biru { background: var(--biru); color: #fff; }
+.btn-biru:hover { background: var(--biru-tua); color: #fff; transform: translateY(-1px); }
+
+/* Hijau hanya dipakai untuk CTA WhatsApp */
+.btn-wa { background: var(--wa); color: #fff; }
+.btn-wa:hover { background: var(--wa-gelap); color: #fff; transform: translateY(-1px); }
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background: #fff !important;
+    border-bottom: 1px solid var(--garis);
+    box-shadow: 0 2px 10px rgba(11, 58, 140, 0.06);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar-brand img {
+    display: block;
+    height: clamp(2.75rem, 8vw, 3.5rem);
+    width: auto;
+}
+
+.navbar .nav-link {
+    color: var(--teks);
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible { color: var(--biru); }
+
+@media (min-width: 768px) {
+    .navbar .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .navbar .drawer { margin-left: auto; }
+}
+
+/* ---------- Carousel ---------- */
+.banner-carousel .carousel-inner {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(8, 35, 90, 0.18);
+}
+
+/* Gambar tampil penuh, tanpa overlay, tanpa teks HTML */
+.banner-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 1;   /* sesuai ukuran banner 2400x800 */
+    object-fit: cover;
+}
+
+/* Efek halus saat slide berganti (opsional) */
+.banner-carousel .carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* ---------- Judul section ---------- */
+.judul-section {
+    position: relative;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+    padding-bottom: 0.7rem;
+}
+
+.judul-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3rem;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--kuning);
+}
+
+/* ---------- Kartu ---------- */
+.card {
+    background: #fff;
+    color: var(--teks);
+    border: 1px solid var(--garis);
+    border-radius: 1rem;
+    box-shadow: var(--bayangan);
+    overflow: hidden;
+}
+
+.card-title { color: var(--teks-lembut); font-weight: 700; }
+.card-text { color: var(--teks-lembut); }
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+@media (min-width: 576px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) {
+    .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card-grid .card { width: 100%; max-width: none; }
+
+.card-grid .card-img-top {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---------- Galeri portofolio ---------- */
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+@media (min-width: 768px) {
+    .galeri { grid-template-columns: repeat(3, 1fr); }
+}
+
+.galeri-item {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0.9rem;
+    background: var(--biru-pucat);
+    border: 1px solid var(--garis);
+    box-shadow: var(--bayangan);
+}
+
+.galeri-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.galeri-item:hover img { transform: scale(1.04); }
+
+.galeri-item figcaption {
+    padding: 0.6rem 0.85rem;
+    font-size: 0.9rem;
+    color: var(--teks-lembut);
+}
+
+.galeri-tombol {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+}
+
+.galeri-tombol:focus-visible { outline-offset: -3px; }
+
+/* ---------- Harga ---------- */
+.harga-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.harga-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.harga-nominal {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    color: var(--biru);
+    margin: 0 0 0.75rem;
+}
+
+.harga-card .btn-wa { align-self: flex-start; margin-top: auto; }
+
+/* Daftar layanan dengan centang hijau */
+.checklist {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.checklist li::before {
+    content: "\2713";
+    content: "\2713" / "";
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: 0.1rem;
+    border-radius: 50%;
+    background: #198754;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* ---------- Kontak ---------- */
+.kontak-card { max-width: none; }
+
+/* Tanpa border, dibedakan dari halaman lewat warna biru muda */
+.kontak .kontak-card {
+    --bs-card-border-width: 0;
+    border: 0;
+    box-shadow: none;
+    background: var(--biru-muda);
+    border-radius: 1.25rem;
+}
+
+.kontak-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.kontak-card .card-title {
+    font-size: clamp(1.5rem, 4.5vw, 2.25rem);
+    margin-bottom: 0.5rem;
+}
+
+.kontak-card .btn-cta-besar {
+    align-self: center;
+    margin-inline: auto;
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    padding: 0.9rem 2.25rem;
+}
+
+/* Panah yang mengarah ke tombol CTA */
+.panah-cta {
+    display: inline-flex;
+    margin-bottom: 0.75rem;
+    color: #dc3545;
+    animation: panahTurun 1.2s ease-in-out infinite;
+}
+
+.panah-cta svg { width: 2.5rem; height: 2.5rem; }
+
+@keyframes panahTurun {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(0.6rem); }
+}
+
+/* ---------- Lokasi ---------- */
+.lokasi-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+@media (min-width: 768px) {
+    .lokasi-grid { grid-template-columns: 1fr 2fr; }
+}
+
+.lokasi-card { max-width: none; }
+.lokasi-card address { margin: 0; font-style: normal; line-height: 1.7; }
+
+.peta {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid var(--garis);
+    box-shadow: var(--bayangan);
+}
+
+.peta iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ---------- Footer ---------- */
+.footer-situs {
+    margin-top: clamp(1.5rem, 4vw, 3rem);
+    padding-block: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    background: var(--biru-tua);
+    color: #fff;
+}
+
+.footer-situs p { margin: 0; }
+
+/* ---------- Tombol WhatsApp mengambang ---------- */
+.wa-mengambang {
+    position: fixed;
+    right: calc(1rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+}
+
+.wa-mengambang:hover { transform: scale(1.08); }
+
+.wa-mengambang svg { width: 1.9rem; height: 1.9rem; }
+
+.wa-mengambang::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid #25d366;
+    animation: denyut 2s ease-out infinite;
+}
+
+@keyframes denyut {
+    from { transform: scale(1);   opacity: 0.8; }
+    to   { transform: scale(1.6); opacity: 0; }
+}
+
+/* ---------- Lightbox zoom gambar ---------- */
+.lightbox {
+    margin: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    max-width: 95vw;
+    max-height: 95vh;
+    overflow: visible;
+}
+
+.lightbox::backdrop { background: rgba(8, 25, 60, 0.88); }
+
+.lightbox figure { margin: 0; }
+
+.lightbox img {
+    display: block;
+    max-width: 95vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    border-radius: 0.5rem;
+    cursor: zoom-out;
+    animation: zoomMasuk 0.3s ease;
+}
+
+.lightbox figcaption { color: #fff; text-align: center; padding-top: 0.6rem; }
+
+.lightbox-tutup {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--biru-tua);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@keyframes zoomMasuk {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Animasi saat tiba di section tujuan ---------- */
+@keyframes naik {
+    from { opacity: 0; transform: translateY(24px) scale(0.98); }
+    to   { opacity: 1; transform: none; }
+}
+
+.sorot .judul-section,
+.sorot .card,
+.sorot .galeri-item,
+.sorot .peta {
+    animation: naik 0.6s ease both;
+}
+
+.sorot .peta { animation-delay: 0.12s; }
+
+.sorot .card-grid .card:nth-child(2) { animation-delay: 0.12s; }
+.sorot .card-grid .card:nth-child(3) { animation-delay: 0.24s; }
+.sorot .galeri-item:nth-child(2) { animation-delay: 0.08s; }
+.sorot .galeri-item:nth-child(3) { animation-delay: 0.16s; }
+.sorot .galeri-item:nth-child(4) { animation-delay: 0.24s; }
+.sorot .galeri-item:nth-child(5) { animation-delay: 0.32s; }
+.sorot .galeri-item:nth-child(6) { animation-delay: 0.4s; }
+
+/* ---------- Hormati pengguna yang mengurangi gerakan ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    .sorot .judul-section,
+    .sorot .card,
+    .sorot .galeri-item,
+    .sorot .peta { animation: none; }
+
+    .lightbox img,
+    .panah-cta { animation: none; }
+
+    .wa-mengambang::after { animation: none; display: none; }
+
+    .wa-mengambang,
+    .galeri-item img,
+    .btn-biru,
+    .btn-wa { transition: none; }
+}
