@@ -1,4 +1,3 @@
-
 /* =========================================================
    Tukang AC - style.css
    Palet warna diambil dari logo: biru tua, biru royal,
@@ -27,6 +26,11 @@
 
 /* ---------- Dasar ---------- */
 html { scroll-behavior: smooth; }
+
+/* Scroll hanya terkunci selama ada dialog terbuka (drawer/lightbox).
+   Begitu dialog tertutup, halaman otomatis bisa di-scroll lagi. */
+html { overflow-y: auto !important; }
+html:has(dialog[open]) { overflow: hidden !important; }
 
 html, body {
     background: #fff;
