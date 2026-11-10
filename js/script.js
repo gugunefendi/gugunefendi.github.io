@@ -4,7 +4,7 @@
 
 // Ganti nomor ini dengan nomor WhatsApp kamu
 // (format 62..., tanpa tanda + dan tanpa 0 di depan)
-var NOMOR_WA = '6281234567890';
+var NOMOR_WA = '6285156513305';
 
 // ---------- Link WhatsApp ----------
 // Semua elemen dengan atribut data-wa otomatis diisi link WhatsApp + pesan awal
