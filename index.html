@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tukang AC</title>
+
+    <!-- Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Style website (harus setelah framework) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar md:navbar-expand bg-1">
+        <div class="container">
+            <a class="navbar-brand" href="#" aria-label="Tukang AC - ke atas halaman">
+                <img src="assets/logo.png" alt="Logo Tukang AC" width="56" height="56">
+            </a>
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                <div class="drawer-header">
+                    <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                </div>
+                <div class="drawer-body mb-2 md:mb-0">
+                    <ul class="nav navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#harga">Harga</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+            </dialog>
+        </div>
+    </nav>
+
+    <main class="page">
+        <!-- Carousel -->
+        <div id="carouselExampleContent" class="carousel slide banner-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/banner6.jpg" class="banner-img"
+                        alt="Cuci AC mulai Rp 70.000. AC kotor bikin udara kurang dingin dan bau apek. Serahkan ke teknisi kami, harganya bersahabat.">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/banner7.jpg" class="banner-img" loading="lazy"
+                        alt="AC kurang dingin? Bisa jadi freon kurang. Kami cek tekanan dulu, lalu isi sesuai kebutuhan.">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/banner8.jpg" class="banner-img" loading="lazy"
+                        alt="Mau pindah AC? Bongkar, pasang, dan tes di tempat baru sampai AC dingin lagi.">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center gap-2 mt-3">
+                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleContent" data-bs-slide="prev" style="--bs-carousel-control-icon-width: 1rem;">
+                    <span class="carousel-icon-prev" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleContent" data-bs-slide="next" style="--bs-carousel-control-icon-width: 1rem;">
+                    <span class="carousel-icon-next" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Layanan -->
+        <section id="layanan" class="layanan">
+            <h2 class="judul-section">Layanan</h2>
+            <div class="card-grid">
+                <section class="card">
+                    <img src="assets/cuci-ac-6.png" class="card-img-top" alt="Gambar layanan 1" loading="lazy">
+                    <div class="card-body">
+                        <h4 class="card-title">Cuci AC</h4>
+                        <p class="card-text">AC kotor bikin udara kurang dingin dan bau apek. Indoor dan outdoor kami bersihkan sampai tuntas, harga tetap bersahabat.</p>
+                        <!-- <a href="#" class="btn-biru">Go somewhere</a> -->
+                    </div>
+                </section>
+                <section class="card">
+                    <img src="assets/portofolio5.png" class="card-img-top" alt="Gambar layanan 2" loading="lazy">
+                    <div class="card-body">
+                        <h4 class="card-title">Tambah Freon</h4>
+                        <p class="card-text">AC menyala tapi tidak dingin? Bisa jadi freon kurang. Kami cek tekanan dulu, baru diisi sesuai kebutuhan.</p>
+                        <!-- <a href="#" class="btn-biru">Go somewhere</a> -->
+                    </div>
+                </section>
+                <section class="card">
+                    <img src="assets/bongkar-ac.png" class="card-img-top" alt="Gambar layanan 3" loading="lazy">
+                    <div class="card-body">
+                        <h4 class="card-title">Pindah AC</h4>
+                        <p class="card-text">Pindah rumah atau pindah ruangan? Kami bongkar, pasang, dan tes AC di tempat baru sampai dingin lagi.</p>
+                        <!-- <a href="#" class="btn-biru">Go somewhere</a> -->
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Portofolio -->
+        <section id="portofolio" class="portofolio">
+            <h2 class="judul-section">Portofolio</h2>
+            <div class="galeri">
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Cuci AC split di rumah">
+                        <img src="assets/portofolio21.png" data-besar="assets/portofolio21.png" alt="Cuci AC split di rumah" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Cuci AC: Cuci AC split di rumah</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Pembersihan indoor unit">
+                        <img src="assets/portofolio20.png" data-besar="assets/portofolio20.png" alt="Pembersihan indoor unit" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Cuci AC: Pembersihan indoor unit</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Cuci outdoor unit">
+                        <img src="assets/portofolio19.png" data-besar="assets/portofolio19.png" alt="Cuci outdoor unit" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Cuci AC: Cuci outdoor unit</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Isi freon dan cek tekanan">
+                        <img src="assets/portofolio4.jpg" data-besar="assets/portofolio4.jpg" alt="Isi freon dan cek tekanan" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Isi freon dan cek tekanan</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Perbaikan kelistrikan AC">
+                        <img src="assets/portofolio5.png" data-besar="assets/portofolio5.png" alt="Perbaikan kelistrikan AC" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Perbaikan kelistrikan AC</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Servis AC tidak dingin">
+                        <img src="assets/portofolio6.jpg" data-besar="assets/portofolio6.jpg" alt="Servis AC tidak dingin" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Servis AC tidak dingin</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Servis AC tidak dingin">
+                        <img src="assets/portofolio7.png" data-besar="assets/portofolio7.png" alt="Servis AC tidak dingin" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Servis AC tidak dingin</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Servis AC tidak dingin">
+                        <img src="assets/portofolio8.png" data-besar="assets/portofolio8.png" alt="Servis AC tidak dingin" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Servis AC tidak dingin</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Servis AC tidak dingin">
+                        <img src="assets/portofolio9.png" data-besar="assets/portofolio9.png" alt="Servis AC tidak dingin" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Servis AC tidak dingin</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Servis AC tidak dingin">
+                        <img src="assets/portofolio10.png" data-besar="assets/portofolio10.png" alt="Servis AC tidak dingin" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Servis AC tidak dingin</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Servis AC tidak dingin">
+                        <img src="assets/portofolio11.png" data-besar="assets/portofolio11.png" alt="Servis AC tidak dingin" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Servis AC tidak dingin</figcaption> -->
+                </figure>
+                <figure class="galeri-item">
+                    <button type="button" class="galeri-tombol" aria-label="Perbesar gambar: Servis AC tidak dingin">
+                        <img src="assets/portofolio12.png" data-besar="assets/portofolio12.png" alt="Servis AC tidak dingin" loading="lazy">
+                    </button>
+                    <!-- <figcaption>Servis AC: Servis AC tidak dingin</figcaption> -->
+                </figure>
+            </div>
+        </section>
+
+        <!-- Harga -->
+        <section id="harga" class="harga">
+            <h2 class="judul-section">Harga</h2>
+            <div class="card-grid">
+                <section class="card harga-card">
+                    <img src="assets/cuci-ac-5.png" class="card-img-top" alt="Layanan Cuci AC" loading="lazy">
+                    <div class="card-body">
+                        <h4 class="card-title">Cuci AC</h4>
+                        <p class="harga-nominal">Rp 70.000</p>
+                        <p class="card-text">Pembersihan unit AC agar dingin dan bersih.</p>
+                        <ul class="checklist">
+                            <li>Cuci indoor unit</li>
+                            <li>Cuci outdoor unit</li>
+                            <li>Bersihkan filter dan saluran drainase</li>
+                            <li>Cek kinerja pendinginan</li>
+                        </ul>
+                        <a class="btn-wa" href="https://wa.me/" data-wa="Halo Tukang AC, saya ingin pesan layanan: Cuci AC." target="_blank" rel="noopener">Pesan via WhatsApp</a>
+                    </div>
+                </section>
+                <section class="card harga-card">
+                    <img src="assets/ganti-freon.png" class="card-img-top" alt="Layanan Tambah Freon" loading="lazy">
+                    <div class="card-body">
+                        <h4 class="card-title">Tambah Freon</h4>
+                        <p class="harga-nominal">Rp 350.000</p>
+                        <p class="card-text">Isi ulang freon dan cek tekanan AC.</p>
+                        <ul class="checklist">
+                            <li>Cek tekanan freon</li>
+                            <li>Isi freon sesuai kebutuhan</li>
+                            <li>Cek kebocoran pipa</li>
+                            <li>Tes pendinginan setelah servis</li>
+                        </ul>
+                        <a class="btn-wa" href="https://wa.me/" data-wa="Halo Tukang AC, saya ingin pesan layanan: Tambah Freon." target="_blank" rel="noopener">Pesan via WhatsApp</a>
+                    </div>
+                </section>
+                <section class="card harga-card">
+                    <img src="assets/card3.png" class="card-img-top" alt="Layanan Pindah AC" loading="lazy">
+                    <div class="card-body">
+                        <h4 class="card-title">Pindah AC</h4>
+                        <p class="harga-nominal">Rp 500.000</p>
+                        <p class="card-text">Bongkar dan pasang AC di lokasi baru.</p>
+                        <ul class="checklist">
+                            <li>Bongkar unit AC</li>
+                            <li>Pasang di lokasi baru</li>
+                            <li>Pemasangan pipa dan kabel</li>
+                            <li>Tes AC setelah pemasangan</li>
+                        </ul>
+                        <a class="btn-wa" href="https://wa.me/" data-wa="Halo Tukang AC, saya ingin pesan layanan: Pindah AC." target="_blank" rel="noopener">Pesan via WhatsApp</a>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak" class="kontak">
+            <h2 class="judul-section">Kontak</h2>
+            <div class="card kontak-card">
+                <div class="card-body">
+                    <h4 class="card-title">Konsultasi Gratis</h4>
+                    <p>Belum tau apa yang mesti di perbaiki, konsultasi dulu gratis.</p>
+                    <span class="panah-cta" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+                    </span>
+                    <a class="btn-wa btn-cta-besar" href="https://wa.me/" data-wa="Halo Tukang AC, saya ingin konsultasi gratis." target="_blank" rel="noopener">Chat via WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lokasi -->
+        <section id="lokasi" class="lokasi">
+            <h2 class="judul-section">Lokasi</h2>
+            <div class="lokasi-grid">
+                <div class="card lokasi-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Alamat</h4>
+                        <address class="card-text">
+                            Jl. Gandaria No.61C, <br>
+                            keluarahan Serua, Kec. Bojongsari, <br>
+                            Kota Depok, Jawa Barat 16516
+                            <!-- Jl. Contoh No. 123<br>
+                            Kelurahan Contoh, Kecamatan Contoh<br>
+                            Kota Contoh 12345 -->
+                        </address>
+                    </div>
+                </div>
+                <div class="peta">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.173182265074!2d106.73055707400901!3d-6.371629362325399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef54bbbabb0f%3A0xf73d10eb3dd6b1fa!2sJasa%20Pembuatan%20Website%20-%20Gunawan%20Dev!5e0!3m2!1sid!2sid!4v1794274972030!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- <iframe src="https://www.google.com/maps?q=Indonesia&amp;output=embed" title="Lokasi Tukang AC di Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-situs">
+        <div class="page">
+            <p>&copy; <span id="tahun">2026</span> Tukang AC. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Tombol WhatsApp mengambang -->
+    <a class="wa-mengambang" href="https://wa.me/" data-wa="Halo Tukang AC, saya ingin bertanya." target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </a>
+
+    <!-- Lightbox zoom gambar -->
+    <dialog class="lightbox" id="lightbox" aria-label="Gambar diperbesar">
+        <button type="button" class="lightbox-tutup" aria-label="Tutup">&#10005;</button>
+        <figure>
+            <img id="lightboxGambar" src="" alt="">
+            <figcaption id="lightboxKeterangan"></figcaption>
+        </figure>
+    </dialog>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
