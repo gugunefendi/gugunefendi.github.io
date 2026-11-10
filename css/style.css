@@ -115,15 +115,46 @@ main section[id] { scroll-margin-top: 6rem; }
 .navbar .nav-link:hover,
 .navbar .nav-link:focus-visible { color: var(--biru); }
 
-@media (min-width: 768px) {
-    .navbar .container-fluid {
+/* Drawer di mobile */
+@media (max-width: 767.98px) {
+    .navbar .drawer {
+        width: min(85vw, 320px);
+        height: 100dvh;
+        max-height: 100dvh;
+        margin: 0 0 0 auto;      /* nempel ke kanan layar */
+        border: 0;
+        border-radius: 0;        /* hilangkan sudut membulat ala card */
+        padding: 0;
+    }
+
+    .navbar .drawer-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid var(--garis);
     }
 
-    .navbar .drawer { margin-left: auto; }
+    .navbar .drawer-body {
+        padding: 0.5rem 0;
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .navbar .nav-link {
+        display: block;
+        padding: 0.5rem 1.25rem;
+        /* border-bottom: 1px solid var(--garis); */
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus-visible {
+        background: rgba(11, 58, 140, 0.05);
+    }
 }
 
 /* ---------- Carousel ---------- */
