@@ -4,7 +4,7 @@
 
 // Ganti nomor ini dengan nomor WhatsApp kamu
 // (format 62..., tanpa tanda + dan tanpa 0 di depan)
-var NOMOR_WA = '6285156513305';
+var NOMOR_WA = '6285891489611';
 
 // ---------- Link WhatsApp ----------
 document.querySelectorAll('[data-wa]').forEach(function (a) {
