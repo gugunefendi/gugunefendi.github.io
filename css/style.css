@@ -242,6 +242,7 @@ main section[id] { scroll-margin-top: 6rem; }
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(0.75rem, 2vw, 1.25rem);
+    align-items: start; /* tiap card setinggi gambarnya sendiri */
 }
 
 @media (min-width: 768px) {
@@ -259,8 +260,7 @@ main section[id] { scroll-margin-top: 6rem; }
 
 .galeri-item img {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+    height: auto;
     display: block;
     transition: transform 0.4s ease;
 }
@@ -283,6 +283,40 @@ main section[id] { scroll-margin-top: 6rem; }
 }
 
 .galeri-tombol:focus-visible { outline-offset: -3px; }
+
+/* ---------- Mengapa Harus Kami ---------- */
+.alasan-utama {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+@media (min-width: 768px) {
+    .alasan-utama { grid-template-columns: repeat(2, 1fr); }
+}
+
+.alasan-utama-card {
+    background: var(--biru-tua);
+    border: 0;
+}
+
+.alasan-utama-card .card-body {
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.alasan-utama-card .card-title {
+    color: var(--kuning);
+    font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+    margin-bottom: 0.75rem;
+}
+
+.alasan-utama-card .card-text {
+    color: #fff;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+.alasan-utama-card .card-text + .card-text { margin-top: 0.75rem; }
 
 /* ---------- Harga ---------- */
 .harga-card {
