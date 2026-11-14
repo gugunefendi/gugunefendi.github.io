@@ -436,6 +436,8 @@ main section[id] { scroll-margin-top: 6rem; }
 .lokasi-card { max-width: none; }
 .lokasi-card address { margin: 0; font-style: normal; line-height: 1.7; }
 
+.lokasi-info { max-width: none; }
+
 .peta {
     position: relative;
     min-height: 300px;
